@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <style>
+        html {scroll-behavior: smooth;}
+        body {
+        font-family: "Quicksand", sans-serif;
+        background-image: url("assets/bg.jpg");
+        }
+
+        .logo {
+            width: 3rem;
+            border-radius: 100%;
+        }
+        .navbar {
+            margin-left: 5%;
+            margin-right: 5%;
+            padding: 0.5%;
+            margin-bottom: 3%;
+            margin-top: 0;
+            background-color: rgba(255, 255, 255, 0.400);
+            border-radius: 1rem;
+            box-shadow: 10px 5px 5px 0px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 5%;
+        }
+
+        .links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .links li {
+            margin-left: 20px;
+        }
+        .links img {
+            width: 2rem;
+        }
+
+        .box {
+            margin-left: 5%;
+            margin-right: 5%;
+            padding: 0.5%;
+            margin-bottom: 3%;
+            margin-top: 3%;
+            background-color: rgba(255, 255, 255, 0.400);
+            border-radius: 1rem;
+            box-shadow: 10px 5px 5px 0px rgba(0, 0, 0, 0.1);
+        }
+        .box h2, .box p {
+            margin-left: 2%;
+        }
+
+        .mini-box{
+            margin-left: 2%;
+            margin-bottom: 2%;
+            display: flex;
+            align-items: center
+        }
+        .mini-box img{
+            width: 4rem;
+            margin-right: 1%;
+        }
+
+        .social-link{
+            color: rgb(28, 36, 145);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+            <img class="logo" src="assets/logo.png" alt="Logo de profil">
+            <h1>Aurèle J.</h1>
+            <ul class="links">
+                <li><a href="index.html"><img src="assets/home.png" alt="image representing a skill" class="skill-image"></a></li>
+                <li><a href="#b"><img src="assets/skills.png" alt="image representing a skill" class="skill-image"></a></li>
+                <li><a href="#c"><img src="assets/contact.png" alt="image representing a skill" class="skill-image"></a></li>
+            </ul>
+    </nav>
+
+    <section class="box">
+        <h2 id="a">Une rapide présentation</h2>
+        <p>
+            Bienvenue sur mon Portfolio, vous trouverez ici toutes les informations concernant mes compétences, mes experiences et mes centres d'intéret en tous genres.
+            Cette page à pour but, au passage, de vous démontrer mes compétences en HTML et en CSS.
+            Notez que ce site est sujet à évolution et va continuellement se remplir de nouveau contenu au fur et à mesure de mes experiences, formations, projets etc ...
+            N'hésitez pas à me contacter via les moyens listés en bas de page, je me ferais un plaisir de vous répondre.
+        </p>
+
+    </section>
+
+    <section class="box">
+        <h2 id="b">Mes compétences</h2>
+        <div class="mini-box">
+            <img src="assets/python.png" alt="image representing a skill" class="skill-image">
+            <h4>Python : Dans tout type de projets</h4>
+        </div>
+        <div class="mini-box">
+            <img src="assets/cpp.png" alt="image representing a skill">
+            <h4>C++ : Pour des algorithmes de backend, et traitement de donnés</h4>
+        </div>
+        <div class="mini-box">
+            <img src="assets/bash.png" alt="image representing a skill">
+            <h4>Bash : Solides bases générales</h4>
+        </div>
+        <div class="mini-box">
+            <img src="assets/html.png" alt="image representing a skill" class="skill-image">
+            <h4>HTML : Pour pages web allant à l'essentiel</h4>
+        </div>
+        <div class="mini-box">
+            <img src="assets/css.png" alt="image representing a skill" class="skill-image">
+            <h4>CSS : Afin de créer une mise en page claire, visuellement correcte</h4>
+        </div>
+        <div class="mini-box">
+            <img src="assets/anglais.png" alt="image representing a skill" class="skill-image">
+            <h4>Anglais [B2] : Certification Cambridge B2 First</h4>
+        </div>
+    </section>
+
+    <section class="box">
+        <h2 id="c">Contacts</h2>
+        <div class="box-contacts">
+            <div class="mini-box">
+                <img src="assets/linkedin.png" alt="image representing a skill" class="skill-image">
+                <h4><a href="https://www.linkedin.com/in/aur%C3%A8le-jambert-b5a967278/" class="social-link">Linkedin</a> : Pour toute communication professionelle</h4>
+            </div>
+            <div class="mini-box">
+                <img src="assets/github.png" alt="image representing a skill">
+                <h4><a href="https://github.com/Aurele879" class="social-link">Github</a> : Si vous souhaitez découvrir en détail mes projets</h4>
+            </div>
+            <div class="mini-box">
+                <img src="assets/instagram.png" alt="image representing a skill">
+                <h4><a href="https://www.instagram.com/aurele879/" class="social-link">instagram</a> : Dans le cas ou vous devez me contacter sur le plan privé</h4>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
