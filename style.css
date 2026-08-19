@@ -1,72 +1,136 @@
+html {scroll-behavior: smooth;}
+body {
+    font-family: "Quicksand", sans-serif;
+    background-image: url("assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
 
-        html {scroll-behavior: smooth;}
-        body {
-        font-family: "Quicksand", sans-serif;
-        background-image: url("assets/bg.jpg");
-        }
+.logo {
+    width: 3rem;
+    border-radius: 100%;
+}
+.navbar {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0.5%;
+    margin-bottom: 3%;
+    margin-top: 0;
+    background-color: rgba(255, 255, 255, 0.400);
+    border-radius: 1rem;
+    box-shadow: 10px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+}
 
-        .logo {
-            width: 3rem;
-            border-radius: 100%;
-        }
-        .navbar {
-            margin-left: 5%;
-            margin-right: 5%;
-            padding: 0.5%;
-            margin-bottom: 3%;
-            margin-top: 0;
-            background-color: rgba(255, 255, 255, 0.400);
-            border-radius: 1rem;
-            box-shadow: 10px 5px 5px 0px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 5%;
-        }
+.links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.links li {
+    margin-left: 20px;
+}
+.links img {
+    width: 2rem;
+}
 
-        .links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .links li {
-            margin-left: 20px;
-        }
-        .links img {
-            width: 2rem;
-        }
+.box {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 0.5%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    background-color: rgba(255, 255, 255, 0.400);
+    border-radius: 1rem;
+    box-shadow: 10px 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.box h2, .box p {
+    margin-left: 2%;
+}
 
-        .box {
-            margin-left: 5%;
-            margin-right: 5%;
-            padding: 0.5%;
-            margin-bottom: 3%;
-            margin-top: 3%;
-            background-color: rgba(255, 255, 255, 0.400);
-            border-radius: 1rem;
-            box-shadow: 10px 5px 5px 0px rgba(0, 0, 0, 0.1);
-        }
-        .box h2, .box p {
-            margin-left: 2%;
-        }
+.mini-box{
+    margin-left: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    align-items: center
+}
+.mini-box img{
+    width: 4rem;
+    margin-right: 1%;
+}
 
-        .mini-box{
-            margin-left: 2%;
-            margin-bottom: 2%;
-            display: flex;
-            align-items: center
-        }
-        .mini-box img{
-            width: 4rem;
-            margin-right: 1%;
-        }
+.social-link{
+    color: rgb(28, 36, 145);
+}
+.project-link{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.project-link:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+    .links {
+        display: none;
+    }
+}
 
-        .social-link{
-            color: rgb(28, 36, 145);
-        }
-        @media screen and (max-width: 768px) {
-            .links {
-                display: none;
-            }
-        }
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+    
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+}
+
+.carousel-track {
+    display: flex;
+    width: max-content;
+    gap: 40px;
+    animation: defilement 20s linear infinite;
+}
+
+.carousel-track img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.carousel-track img:hover {
+    transform: scale(1.15);
+}
+
+.carousel-container:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+@keyframes defilement {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 20px));
+    }
+}
