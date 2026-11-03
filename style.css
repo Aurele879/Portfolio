@@ -115,7 +115,7 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding-right: 40px; /* Espace identique entre le dernier élément d'un groupe et le premier du suivant */
+    padding-right: 40px;
     flex-shrink: 0;
 }
 
