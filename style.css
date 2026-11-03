@@ -38,6 +38,11 @@ body {
     width: 2rem;
 }
 
+.social-link {
+    text-decoration: none;
+    color: #fdb953;
+}
+
 .box {
     margin-left: 5%;
     margin-right: 5%;
@@ -63,9 +68,6 @@ body {
     margin-right: 1%;
 }
 
-.social-link{
-    color: #ebac38;
-}
 .project-link{
     text-decoration: none;
     color: #f1f5f9;
@@ -85,6 +87,7 @@ body {
     overflow: hidden;
     padding: 20px 0;
     position: relative;
+    user-select: none;
     
     mask-image: linear-gradient(
         to right,
@@ -105,18 +108,25 @@ body {
 .carousel-track {
     display: flex;
     width: max-content;
-    gap: 40px;
-    animation: defilement 20s linear infinite;
+    animation: defilement 25s linear infinite;
 }
 
-.carousel-track img {
+.carousel-group {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-right: 40px; /* Espace identique entre le dernier élément d'un groupe et le premier du suivant */
+    flex-shrink: 0;
+}
+
+.carousel-group img {
     height: 60px;
-    width: auto;
+    width: 60px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
-.carousel-track img:hover {
+.carousel-group img:hover {
     transform: scale(1.15);
 }
 
@@ -125,10 +135,10 @@ body {
 }
 
 @keyframes defilement {
-    from {
+    0% {
         transform: translateX(0);
     }
-    to {
-        transform: translateX(calc(-50% - 20px));
+    100% {
+        transform: translateX(-50%);
     }
 }
